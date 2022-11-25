@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13f5bb6b-3be0-43bb-b125-b364aea486be" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Apex Class" />
+        <option value="Apex Metadata" />
+      </list>
+    </option>
+  </component>
+  <component name="IlluminatedCloudWorkspaceSettings">
+    <option name="moduleWorkspaceSettings">
+      <map>
+        <entry key="B2BCommerceTraining">
+          <value>
+            <ModuleWorkspaceSettings>
+              <option name="moduleContentsLastModified" value="1666867338378" />
+            </ModuleWorkspaceSettings>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectWorkspaceSettings">
+      <ProjectWorkspaceSettings>
+        <option name="anonymousApexSettings">
+          <AnonymousApexSettings>
+            <option name="savedDocuments">
+              <list>
+                <AnonymousApexSavedDocument>
+                  <option name="apexLogLevel" value="FINEST" />
+                  <option name="body" value="" />
+                  <option name="name" value="Anonymous Apex 1" />
+                  <option name="nbaLogLevel" value="ERROR" />
+                  <option name="profilingLogLevel" value="ERROR" />
+                  <option name="splitterProportion" value="0.1900415" />
+                  <option name="systemLogLevel" value="FINEST" />
+                  <option name="validationLogLevel" value="ERROR" />
+                  <option name="visualforceLogLevel" value="FINE" />
+                  <option name="waveLogLevel" value="ERROR" />
+                  <option name="workflowLogLevel" value="ERROR" />
+                </AnonymousApexSavedDocument>
+              </list>
+            </option>
+          </AnonymousApexSettings>
+        </option>
+        <option name="connectionWorkspaceSettings">
+          <map>
+            <entry key="b2bCommerceTraining">
+              <value>
+                <ConnectionWorkspaceSettings>
+                  <option name="buildSuccessDatesBySourceRootRelativePath">
+                    <map>
+                      <entry key="APEXCLASS:CARDITEMCREATORLOGIC" value="1667561606028" />
+                      <entry key="APEXCLASS:CARTITEMCREATOR" value="1667489391553" />
+                      <entry key="APEXCLASS:CCEXTLOGICCARTSAV" value="1667475110000" />
+                      <entry key="APEXCLASS:CCEXTLOGICCARTSAVE" value="1667478055000" />
+                      <entry key="APEXCLASS:CCEXTPRODUCTLOGICFIND" value="1667562679538" />
+                      <entry key="APEXCLASS:CCEXTPRODUCTLOGICPRICING" value="1667578725033" />
+                      <entry key="APEXCLASS:CCEXT_CC_HK_MENU" value="1668069101782" />
+                      <entry key="APEXCLASS:CCEXT_HK_USERINTERFACE" value="1668069435062" />
+                      <entry key="APEXCLASS:CCPRODUCTFINDER" value="1667578780238" />
+                      <entry key="APEXCLASS:CCTRAININGPRODUCTSERVICE" value="1667578550683" />
+                      <entry key="APEXCLASS:CC_EXTEND_CCSERVICECART" value="1667489504000" />
+                      <entry key="APEXCLASS:DESTRUCTIVECHANGES.XML" value="1667562518000" />
+                      <entry key="APEXCLASS:TRH_CCCARTITEM" value="1667392840145" />
+                      <entry key="APEXTRIGGER:TRG_CCCARTITEM" value="1667478910079" />
+                    </map>
+                  </option>
+                </ConnectionWorkspaceSettings>
+              </value>
+            </entry>
+          </map>
+        </option>
+      </ProjectWorkspaceSettings>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GiN6RgEDUCPr9jNJzUMAfp2pze" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aketa/Desktop/Practice/DeloitteProjects/B2BCommerceTraining&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13f5bb6b-3be0-43bb-b125-b364aea486be" name="Changes" comment="" />
+      <created>1666867270919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666867270919</updated>
+    </task>
+    <servers />
+  </component>
+</project>

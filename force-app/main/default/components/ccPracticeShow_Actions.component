@@ -1,0 +1,28 @@
+<apex:component id="ccPracticeShow_Actions" controller="RemoteActionClass">
+  <script>
+    function getAllEquipment() {
+      var remoteCall = _.extend(CCRZ.RemoteInvocation, {
+        className: "RemoteActionClass"
+      });
+      return new Promise(function (resolve, reject) {
+        remoteCall.invokeContainerLoadingCtx(
+          $("body"),
+          "getAllEquipment",
+          function (resp) {
+            if (resp && resp.success) {
+              resolve(resp.data);
+              return resp.data;
+            } else {
+              reject(resp);
+            }
+          },
+          {
+            buffer: false,
+            escape: false,
+            nmsp: false
+          }
+        );
+      });
+    }
+  </script>
+</apex:component>

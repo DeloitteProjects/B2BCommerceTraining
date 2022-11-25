@@ -1,0 +1,60 @@
+<!--
+ - Created by aketa on 10/23/2022.
+ -->
+
+<apex:page
+  id="CCPracticeShow"
+  applyHtmlTag="false"
+  docType="html-5.0"
+  sidebar="false"
+  showHeader="false"
+  standardStylesheets="false"
+>
+  <c:ccPracticeShow_Templates />
+  <c:ccPracticeShow_Actions />
+
+  <div id="display-elements"></div>
+  <script type="text/javascript">
+    Handlebars.registerHelper("url", function (options) {
+      console.log(options);
+    });
+    jQuery(function ($) {
+      CCRZ.models.MyEquipmentModel = Backbone.Model.extend({
+        idAttribute: "Id"
+      });
+
+      CCRZ.collections.MyEquipmentCollection = Backbone.Collection.extend({
+        model: CCRZ.models.MyEquipmentModel,
+        initialize: function () {},
+        fetch: function () {
+          let self = this;
+          getAllEquipment().then((res) => {
+            self.reset(res);
+          });
+        }
+      });
+
+      CCRZ.views.MyEquipmentView = Backbone.View.extend({
+        template: CCRZ.util.template("first-element"),
+        initialize: function () {
+          this.listenTo(this.collection, "reset", this.render);
+          this.collection.fetch();
+        },
+        render: function () {
+          let equipmentData = this.formatPayload(this.collection.toJSON());
+          console.log(equipmentData);
+          this.$el.html(this.template(equipmentData));
+        },
+        formatPayload: function (data) {
+          let equipmetData = { equipments: data };
+          return equipmetData;
+        }
+      });
+
+      let myView = new CCRZ.views.MyEquipmentView({
+        collection: new CCRZ.collections.MyEquipmentCollection(),
+        el: $("#display-elements")
+      });
+    });
+  </script>
+</apex:page>

@@ -1,0 +1,28 @@
+<!--
+ - Created by aketa on 10/28/2021.
+ -->
+
+<!-- Opportunity Product Wizard -->
+<template>
+    <lightning-input type="text" label="Enter the name of the collection" onkeyup= {handleKeyChange}></lightning-input>
+    Collection Category:
+    <template for:each={picklistValues.data} for:item="picklist">
+
+        <p key={recordId} style="display:inline">
+            <lightning-input type="checkbox" label={picklist} name="input1" onchange= {handleClick}></lightning-input>
+        </p>
+    </template>
+
+    <lightning-datatable
+            key-field="id"
+            columns={columns}
+            data={orderItem.data}
+            onclick={handleClickTable}>
+    </lightning-datatable>
+    <lightning-datatable
+            key-field="id"
+            columns={columns1}
+            data={products.data}
+            >
+    </lightning-datatable>
+</template>

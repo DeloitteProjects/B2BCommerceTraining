@@ -1,0 +1,48 @@
+<!--
+ - Created by aketa on 10/29/2021.
+ -->
+
+<!-- Team Ranking -->
+<template>
+    <lightning-card title="Ranking Teams">
+    <lightning-input type="text" label="Enter the name of the team" onkeyup= {handleKeyChange}></lightning-input>
+<br>
+    <lightning-datatable
+            key-field="id"
+            columns={columns}
+            data={sliceTeams}
+            onclick={handleClickTable}>
+    </lightning-datatable>
+
+    <br>
+        <template if:true={showPrevious}>
+        <lightning-button variant="brand" label="Previous" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </template>
+        <template for:each={pageNumber} for:item= "pageNum">
+            <p key={Id} style="display:inline">
+            <lightning-button variant="brand" label={pageNum} title="Primary action" onclick={pageSet} class="slds-m-left_x-small"></lightning-button>
+            </p>
+        </template>
+        <template if:true={showNext}>
+        <lightning-button variant="brand" label="Next" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </template>
+        <br>
+        <br>
+        <p><lightning-formatted-text value={directions} ></lightning-formatted-text></p>
+        <br>
+    </lightning-card>
+    <br>
+        <template if:true={kushti}>
+            <lightning-card title="Employees">
+    <lightning-datatable
+            key-field="id"
+            columns={columns1}
+            data={employees.data}
+            hide-checkbox-column="true"
+    ></lightning-datatable>
+            <br>
+            <br>
+            </lightning-card>
+        </template>
+
+</template>

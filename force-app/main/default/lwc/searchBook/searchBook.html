@@ -1,0 +1,21 @@
+<!--
+ - Created by aketa on 10/27/2021.
+ -->
+
+<!-- Search Book -->
+<template >
+    <lightning-input type="text" label="Enter some text" onkeyup= {handleKeyChange}></lightning-input>
+
+    <lightning-datatable
+                key-field="id"
+                columns={columns}
+                data={orderItem.data}
+                hide-checkbox-column
+                default-sort-direction={defaultSortDirection}
+                sorted-direction={sortDirection}
+                sorted-by={sortedBy}
+                onsort={onHandleSort}>
+        </lightning-datatable>
+
+
+</template>

@@ -1,0 +1,29 @@
+<apex:component controller="RemoteActionClass">
+  <script type="text/javascript">
+    function getEquipment(equipmentId) {
+      var remoteCall = _.extend(CCRZ.RemoteInvocation, {
+        className: "RemoteActionClass"
+      });
+      return new Promise(function (resolve, reject) {
+        remoteCall.invokeContainerLoadingCtx(
+          $("body"),
+          "getEquipment",
+          equipmentId,
+          function (resp) {
+            if (resp && resp.success) {
+              resolve(resp.data);
+              return resp.data;
+            } else {
+              reject(resp);
+            }
+          },
+          {
+            buffer: false,
+            escape: false,
+            nmsp: false
+          }
+        );
+      });
+    }
+  </script>
+</apex:component>

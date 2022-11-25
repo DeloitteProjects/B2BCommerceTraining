@@ -1,0 +1,19 @@
+<!--
+ - Created by aketa on 10/20/2021.
+ -->
+
+<!-- Create Questionare -->
+<template>
+    <lightning-card title={title}>
+        <lightning-record-edit-form object-api-name="Questionare__c">
+        <lightning-input-field id="participant" field-name="Was_User_Participant__c"></lightning-input-field>
+        <lightning-input-field id="age" field-name="Age__c"></lightning-input-field>
+        <lightning-input-field  field-name="Comments__c"></lightning-input-field>
+            <lightning-input-field field-name="Score__c"></lightning-input-field>
+        <lightning-input-field field-name="Would_your_recommend_this_Webinar__c"></lightning-input-field>
+        <lightning-input-field field-name="Tell_Us_Why__c"></lightning-input-field>
+    <lightning-button label="Create new questionare" variant="brand" onclick={insertQuestionareAction}></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+
+</template>

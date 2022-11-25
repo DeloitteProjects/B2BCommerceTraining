@@ -1,0 +1,14 @@
+<apex:component id="ccPracticeShow_Templates">
+  <script id="first-element" type="text/template">
+    {{#each equipments}}
+    <div class="display-items">
+        <h1>Equipment Data: </h1>
+        <p>Account: {{this.Account__r.Name}}</p>
+        <a href=https://deloittecom767-dev-ed.my.site.com/b2b/ccrz__ProductDetails?sku={{this.CC_Product__r.ccrz__SKU__c}}><p>Product: {{this.CC_Product__r.Name}}</p></a>
+        <a href=https://deloittecom767-dev-ed.my.site.com/b2b/ccrz__ccPage?pagekey=ajet&id={{this.Id}}><p>Name: {{this.Name}}</p></a>
+        <p>PricePerUnit: {{this.PricePerUnit__c}}</p>
+        <p>Quantity: {{this.Quantity__c}}</p>
+    </div>
+    {{/each}}
+  </script>
+</apex:component>

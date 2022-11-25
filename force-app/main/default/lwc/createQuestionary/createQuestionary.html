@@ -1,0 +1,20 @@
+<!--
+ - Created by aketa on 10/20/2021.
+ -->
+
+<!-- Create Questionary -->
+<template>
+
+        <lightning-record-edit-form object-api-name="Questionare__c" if:true={statusUpdate}>
+            <lightning-input-field field-name="Age__c"></lightning-input-field>
+             <lightning-input-field field-name="Was_User_Participant__c"></lightning-input-field>
+             <lightning-input-field field-name="Score__c"></lightning-input-field>
+            <lightning-input-field onchange={onChangeRecommended} field-name="Would_your_recommend_this_Webinar__c"></lightning-input-field>
+            <lightning-input-field if:true={statusChange} field-name="Tell_Us_Why__c"></lightning-input-field>
+            <lightning-input-field field-name="Webinar__c" value={recordId}></lightning-input-field>
+            <lightning-button variant="brand" onclick= {onHandleSuccess} type="submit" label="Save" ></lightning-button>
+
+        </lightning-record-edit-form>
+
+
+</template>

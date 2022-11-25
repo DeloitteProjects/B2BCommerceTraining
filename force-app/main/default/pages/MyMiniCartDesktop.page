@@ -1,0 +1,14 @@
+<apex:page id="MyMiniCartDesktop">
+  <c:MyMiniCartDesktop_Templates />
+  <script id="AddinMyMiniCartDesktopLogic" type="text/javascript">
+    jQuery(function ($) {
+      console.log("Here we are!!");
+
+      CCRZ.pubSub.on("view:productSearchView:refresh", function () {
+        console.log("being Refreshed");
+        CCRZ.uiProperties.productListPageView.productItem.list.tmpl =
+          "MyMiniCartDesktop_Template";
+      });
+    });
+  </script>
+</apex:page>

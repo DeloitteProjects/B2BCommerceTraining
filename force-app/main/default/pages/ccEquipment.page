@@ -1,0 +1,57 @@
+<apex:page>
+  <c:ccEquipment_Templates />
+  <c:ccEquipment_Actions />
+  <div id="show-equipment"></div>
+  <script type="text/javascript">
+    jQuery(function ($) {
+      let query = window.location.search;
+      query = query.substring(query.indexOf("?"), query.length);
+
+      let queryArray = query.split("&");
+      let id = "";
+      for (let queryParameter of queryArray) {
+        if (queryParameter.includes("id")) {
+          id = queryParameter.substring(
+            queryParameter.indexOf("=") + 1,
+            queryParameter.length
+          );
+          break;
+        }
+      }
+
+      CCRZ.models.MyEquipmentModel = Backbone.Model.extend({
+        idAttribute: "id"
+      });
+
+      CCRZ.collections.MyEquipmentCollection = Backbone.Collection.extend({
+        model: CCRZ.models.MyEquipmentModel,
+
+        initialize: function () {},
+        fetch: function () {
+          let self = this;
+          getEquipment(id).then((res) => {
+            self.reset(res);
+          });
+        }
+      });
+
+      CCRZ.views.MyEquipmentView = Backbone.View.extend({
+        template: CCRZ.util.template("equipment-template"),
+        viewName: "mySpecificEquipmentView",
+
+        initialize: function () {
+          this.listenTo(this.collection, "reset", this.render);
+          this.collection.fetch();
+        },
+        render: function () {
+          this.$el.html(this.template(this.collection.toJSON()[0]));
+        }
+      });
+
+      var myEquipmentView = new CCRZ.views.MyEquipmentView({
+        collection: new CCRZ.collections.MyEquipmentCollection(),
+        el: $("#show-equipment")
+      });
+    });
+  </script>
+</apex:page>

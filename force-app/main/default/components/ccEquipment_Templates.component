@@ -1,0 +1,7 @@
+<apex:component>
+  <script id="equipment-template" type="text/template">
+    <div class="equipment">
+        <p>Name: {{Name}}</p>
+    </div>
+  </script>
+</apex:component>
